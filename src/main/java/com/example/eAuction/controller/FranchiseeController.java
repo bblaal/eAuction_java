@@ -26,7 +26,7 @@ public class FranchiseeController {
     }
 
     @PostMapping("/saveFranchisee")
-    public String saveBooking(@RequestBody Franchisee franchisee){
+    public String saveFranchisee(@RequestBody Franchisee franchisee){
 
         return franchiseeService.addFranchisee(new Franchisee(
 
