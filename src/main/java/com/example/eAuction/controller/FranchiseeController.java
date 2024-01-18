@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/franchisee/api/v1")
 public class FranchiseeController {
@@ -15,18 +15,18 @@ public class FranchiseeController {
     @Autowired
     FranchiseeService franchiseeService;
 
-    @GetMapping("/getFranchisee/{franchiseeId}")
-    public Optional<Franchisee> getFranchiseeById(@PathVariable("franchiseeId") String franchiseeId){
+    @GetMapping("/franchisees/{franchiseeId}")
+    private Optional<Franchisee> getFranchiseeById(@PathVariable("franchiseeId") String franchiseeId){
         return franchiseeService.getFranchiseeById(franchiseeId);
     }
 
-    @GetMapping("/getAllFranchisees")
-    public Iterable<Franchisee> getAllFranchisees(){
+    @GetMapping("/franchisees")
+    private Iterable<Franchisee> getAllFranchisees(){
         return franchiseeService.getAllFranchisee();
     }
 
-    @PostMapping("/saveFranchisee")
-    public String saveFranchisee(@RequestBody Franchisee franchisee){
+    @PostMapping("/addFranchisee")
+    private String saveFranchisee(@RequestBody Franchisee franchisee){
 
         return franchiseeService.addFranchisee(new Franchisee(
 
@@ -34,7 +34,8 @@ public class FranchiseeController {
                         franchisee.getFranchiseeName(),
                         franchisee.getBalance(),
                         franchisee.getFranchiseeEmail(),
-                        franchisee.getFranchiseeContact()
+                        franchisee.getFranchiseeContact(),
+                        franchisee.getPassword()
                 )
         );
     }

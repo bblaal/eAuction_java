@@ -15,17 +15,17 @@ public class PlayerController {
     @Autowired
     PlayerService playerService;
 
-    @GetMapping("/getPlayer/{playerId}")
+    @GetMapping("/players/{playerId}")
     public Optional<Player> getPlayerById(@PathVariable("playerId") String playerId){
         return playerService.getPlayerById(playerId);
     }
 
-    @GetMapping("/getAllPlayers")
+    @GetMapping("/players")
     public Iterable<Player> getAllPlayers(){
         return playerService.getAllPlayers();
     }
 
-    @PostMapping("/savePlayer")
+    @PostMapping("/addPlayers")
     public String savePlayer(@RequestBody Player getAllPlayers){
 
         return playerService.addPlayer(new Player(
