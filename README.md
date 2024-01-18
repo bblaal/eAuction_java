@@ -14,7 +14,7 @@ eAuction java component to provide backend service to the consumer. It has the b
 * **Response Structure**:
 Returns a JSON object of matching franchisee
 
-
+    ```
     {
         "franchiseeId": "BB1001",
         "franchiseeName": "BBLaal",
@@ -23,6 +23,7 @@ Returns a JSON object of matching franchisee
         "franchiseeContact": "8972416245",
         "password": null
     }
+    ```
 
 * **Endpoint**: `/franchisee/api/v1/franchisees`
 
@@ -32,6 +33,7 @@ Returns a JSON object of matching franchisee
 Returns an array with Franchisee List
 
 
+    ```
     [
         {
             "franchiseeId": "BB1001",
@@ -50,6 +52,7 @@ Returns an array with Franchisee List
             "password": null
         }
     ]
+    ```
 
 * **Endpoint**: `/franchisee/api/v1/franchisees`
 
@@ -58,6 +61,7 @@ Returns an array with Franchisee List
 * **Request Body**: Franchisee details JSON Request body
 
 
+    ```
     {
         "franchiseeId": "SG1003",
         "franchiseeName": "Somsuvra Ganguly",
@@ -66,6 +70,7 @@ Returns an array with Franchisee List
         "franchiseeContact": "8972416245",
         "password": null
     }
+    ```
 
 * **Response Status**: 200
 
@@ -80,6 +85,7 @@ Returns an array with Franchisee List
 Returns a JSON object of matching player
 
 
+    ```
     {
         "playerId": "1001",
         "playerName": "Virat Kohli",
@@ -89,6 +95,7 @@ Returns a JSON object of matching player
         "playerSpeciality": "230000",
         "playerLocation": "Delhi"
     }
+    ```
 
 * **Endpoint**: `/players/api/v1/players`
 
@@ -98,6 +105,7 @@ Returns a JSON object of matching player
 Returns an array with Players List
 
 
+    ```
     [
         {
             "playerId": "1001",
@@ -118,6 +126,7 @@ Returns an array with Players List
             "playerLocation": "Kolkata"
         }
     ]
+    ```
 
 * **Endpoint**: `/players/api/v1/addPlayers`
 
@@ -126,6 +135,7 @@ Returns an array with Players List
 * **Request Body**: Players details JSON Request body
 
 
+    ```
     {
         "playerId": "1010",
         "playerName": "Virat Kohli",
@@ -135,5 +145,6 @@ Returns an array with Players List
         "playerSpeciality": "Batsman",
         "playerLocation": "Delhi"
     }
+    ```
 
 * **Response Status**: 200
