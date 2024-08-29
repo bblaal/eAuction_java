@@ -32,5 +32,8 @@ public class Franchisee {
     @Column(name = "FRANCHISEE_CONTACT")
     private String franchiseeContact;
 
+    @Column(name = "PASSWORD")
+    private String password;
+
 
 }
